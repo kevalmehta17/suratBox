@@ -1,17 +1,21 @@
 import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
+import userRoutes from "./routes/user.route.js";
+
 dotenv.config();
 
 const app = express();
 
 app.use(express.json());
 
+app.use("/user", userRoutes);
+
 app.get("/", (req, res) => {
   res.send("Server is ready");
 });
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8500;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
