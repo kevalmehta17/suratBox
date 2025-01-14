@@ -10,10 +10,10 @@ const signToken = (id) => {
 };
 
 export const signup = async (req, res) => {
-  const { name, email, password, age, gender, genderPreference } = req.body;
+  const { name, email, password } = req.body;
 
   try {
-    if (!name || !email || !password || !age || !gender || !genderPreference) {
+    if (!name || !email || !password) {
       return res
         .status(400)
         .json({ success: false, message: "All fields are required" });
@@ -27,16 +27,6 @@ export const signup = async (req, res) => {
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    const verificationToken = Math.floor(
-      100000 + Math.random() * 900000
-    ).toString();
-
-    if (age < 18) {
-      return res.status(400).json({
-        success: false,
-        message: "You must be 18 years or older to register",
-      });
-    }
 
     if (password.length < 6) {
       return res.status(400).json({
@@ -49,8 +39,6 @@ export const signup = async (req, res) => {
       email,
       password: hashedPassword,
       name,
-      verificationToken,
-      verificationTokenExpiresAt: Date.now() + 24 * 60 * 60 * 1000, // 24 hours
     });
 
     await user.save();
