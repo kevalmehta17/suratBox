@@ -1,24 +1,33 @@
-import { Outlet, useNavigation } from "react-router-dom";
+import { Outlet, useNavigation, useLocation } from "react-router-dom";
 import Loader from "./Loader";
 import Header from "./Header";
 
 function AppLayout() {
   const navigation = useNavigation();
   const isLoading = navigation.state === "loading";
+  const location = useLocation();
+
+  // Check if the current route is the root ("/")
+  const isRootRoute = location.pathname === "/";
 
   return (
     <div
-      className="relative z-10 flex flex-col justify-center items-center h-screen"
-      style={{
-        backgroundImage: "url('/p1.webp')", // Path to your image
-        minHeight: "100vh", // Ensure it covers the entire viewport
-        backgroundSize: "cover", // Make sure the image covers the entire container
-        backgroundPosition: "center", // Center the image
-        backgroundRepeat: "no-repeat", // Prevent the image from repeating
-      }}
+      className={`relative z-10 flex flex-col justify-center items-center h-screen ${
+        isRootRoute ? "bg-cover bg-center bg-no-repeat" : ""
+      }`}
+      style={
+        isRootRoute
+          ? {
+              backgroundImage: "url('/p1.webp')", // Path to your image
+              minHeight: "100vh", // Ensure it covers the entire viewport
+            }
+          : {}
+      }
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+      {isRootRoute && (
+        <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+      )}
 
       {/* Loader and Header */}
       {isLoading && <Loader />}

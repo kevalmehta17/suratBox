@@ -1,6 +1,9 @@
 export function Home() {
   return (
-    <div className="relative z-10 flex flex-col items-center justify-center h-screen bg-cover bg-center">
+    <div
+      className="relative z-10 flex flex-col items-center justify-center h-screen bg-cover bg-center"
+      style={{ backgroundImage: "url('/your-cricket-image.jpg')" }}
+    >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
 
@@ -24,31 +27,21 @@ export function Home() {
             <h2 className="text-3xl font-semibold text-green-400 mb-4">
               Why Choose Us?
             </h2>
-            <ul className="text-left list-disc list-inside space-y-3 text-white">
+            <ul className="text-left list-disc list-inside space-y-3 text-white font-semibold">
               <li>
-                <span className="text-green-400">
-                  Professional-grade facilities
-                </span>
+                <span>Professional-grade facilities</span>
               </li>
               <li>
-                <span className="text-green-400">
-                  Multiple box sizes to suit your needs
-                </span>
+                <span>Multiple box sizes to suit your needs</span>
               </li>
               <li>
-                <span className="text-green-400">
-                  Affordable pricing for everyone
-                </span>
+                <span>Affordable pricing for everyone</span>
               </li>
               <li>
-                <span className="text-green-400">
-                  24/7 availability for unmatched convenience
-                </span>
+                <span>24/7 availability for unmatched convenience</span>
               </li>
               <li>
-                <span className="text-green-400">
-                  Professional coaching for all skill levels
-                </span>
+                <span>Professional coaching for all skill levels</span>
               </li>
             </ul>
           </div>
