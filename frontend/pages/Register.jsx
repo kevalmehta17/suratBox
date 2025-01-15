@@ -40,8 +40,8 @@ export function Register() {
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
 
       {/* Main content */}
-      <div className="relative z-10 max-w-md w-full bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden p-8">
-        <h2 className="bg-gradient-to-r from-green-500 to-emerald-700 bg-clip-text text-transparent text-3xl font-bold text-center mb-6">
+      <div className="relative z-10 max-w-md w-full bg-gradient-to-r from-gray-700 via-gray-900 to-black bg-opacity-80 rounded-xl shadow-2xl p-8">
+        <h2 className="text-4xl font-extrabold text-center text-green-400 mb-6">
           Create an Account
         </h2>
         <form onSubmit={handleSubmit}>
@@ -49,21 +49,21 @@ export function Register() {
             icon={User}
             type="text"
             value={name}
-            placeholder="Full Name"
+            placeholder="   Full Name"
             onChange={(e) => setName(e.target.value)}
           />
           <Input
             icon={Mail}
             type="email"
             value={email}
-            placeholder="Email Address"
+            placeholder="  Email Address"
             onChange={(e) => setEmail(e.target.value)}
           />
           <Input
             icon={Lock}
             type="password"
             value={password}
-            placeholder="Password"
+            placeholder="  Password"
             onChange={(e) => setPassword(e.target.value)}
           />
           {error && <p className="font-semibold text-red-500 mb-2">{error}</p>}
