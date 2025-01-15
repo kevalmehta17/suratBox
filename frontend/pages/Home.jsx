@@ -2,7 +2,7 @@ export function Home() {
   return (
     <div
       className="relative z-10 flex flex-col items-center justify-center h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('/your-cricket-image.jpg')" }}
+      style={{ backgroundImage: "url('/cricket-image.jpg')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>

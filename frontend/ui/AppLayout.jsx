@@ -11,31 +11,38 @@ function AppLayout() {
   const isRootRoute = location.pathname === "/";
 
   return (
-    <div
-      className={`relative z-10 flex flex-col justify-center items-center h-screen ${
-        isRootRoute ? "bg-cover bg-center bg-no-repeat" : ""
-      }`}
-      style={
-        isRootRoute
-          ? {
-              backgroundImage: "url('/p1.webp')", // Path to your image
-              minHeight: "100vh", // Ensure it covers the entire viewport
-            }
-          : {}
-      }
-    >
-      {/* Overlay */}
-      {isRootRoute && (
-        <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
-      )}
+    <div className="relative z-10 flex flex-col h-screen">
+      {/* Header always at the top */}
+      <div className="relative z-20">
+        <Header />
+      </div>
 
-      {/* Loader and Header */}
-      {isLoading && <Loader />}
-      <Header />
+      {/* Background for root route */}
+      <div
+        className={`flex-1 ${
+          isRootRoute ? "bg-cover bg-center bg-no-repeat" : ""
+        }`}
+        style={
+          isRootRoute
+            ? {
+                backgroundImage: "url('/p1.webp')", // Path to your image
+                minHeight: "100vh", // Ensure it covers the entire viewport
+              }
+            : {}
+        }
+      >
+        {/* Overlay */}
+        {isRootRoute && (
+          <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+        )}
 
-      {/* Main content */}
-      <div className="relative z-10 w-full">
-        <Outlet />
+        {/* Loader */}
+        {isLoading && <Loader />}
+
+        {/* Main content */}
+        <div className="relative z-10 w-full">
+          <Outlet />
+        </div>
       </div>
     </div>
   );

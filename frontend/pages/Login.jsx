@@ -61,7 +61,7 @@ export function Login() {
             <Input
               type="email"
               value={email}
-              placeholder="  Email Address"
+              placeholder=" Email Address"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -72,7 +72,7 @@ export function Login() {
             <Input
               type="password"
               value={password}
-              placeholder="  Password"
+              placeholder=" Password"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
