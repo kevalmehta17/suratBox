@@ -5,8 +5,7 @@ export const boxCricketData = [
     price: 1500,
     image:
       "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=500&auto=format",
-    description:
-      "Professional cricket facility with high-quality turf and lighting",
+    description: "Professional cricket facility with high-quality and lighting",
     phone: "+91 98765 43210",
     features: [
       "Professional grade turf",
@@ -18,30 +17,31 @@ export const boxCricketData = [
     timing: "6:00 AM - 11:00 PM",
     location: "123 Sports Complex, Main Road",
   },
-  {
-    id: 2,
-    name: "Standard Cricket Box",
-    price: 1000,
-    image:
-      "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=500&auto=format",
-    description: "Standard cricket facility with basic amenities",
-    phone: "+91 98765 43211",
-    features: [
-      "Standard turf",
-      "Basic lighting",
-      "Manual scoreboard",
-      "Basic seating",
-    ],
-    timing: "7:00 AM - 10:00 PM",
-    location: "456 Play Arena, Park Street",
-  },
+  // {
+  //   id: 2,
+  //   name: "Standard Cricket Box",
+  //   price: 1000,
+  //   image:
+  //     "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=500&auto=format",
+  //   description: "Standard cricket facility with basic amenities",
+  //   phone: "+91 98765 43211",
+  //   features: [
+  //     "Standard turf",
+  //     "Basic lighting",
+  //     "Manual scoreboard",
+  //     "Basic seating",
+  //   ],
+  //   timing: "7:00 AM - 10:00 PM",
+  //   location: "456 Play Arena, Park Street",
+  // },
   {
     id: 3,
-    name: "Basic Cricket Box",
+    name: "Standard Cricket Box",
     price: 800,
     image:
       "https://images.unsplash.com/photo-1587385789097-0197a7fbd179?w=500&auto=format",
-    description: "Basic cricket facility for casual players",
+    description:
+      "Standard cricket facility for players with high-quality and lighting",
     phone: "+91 98765 43212",
     features: [
       "Basic ground",

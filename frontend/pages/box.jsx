@@ -48,7 +48,7 @@ export function Box() {
                   </p>
                   <button
                     onClick={() => openDetails(box)}
-                    className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full"
+                    className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full "
                   >
                     View Details
                   </button>

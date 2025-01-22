@@ -33,25 +33,16 @@ function Header() {
               Book Box
             </Link>
           </li>
-          <li>
-            <Link
-              to="/contact-us"
-              className="hover:underline hover:text-green-200 transition-all duration-300"
-            >
-              Contact Us
-            </Link>
-          </li>
         </ul>
       </nav>
 
       {/* Right: Login */}
       <div>
         <Link
-          to="/login"
-          className="flex items-center gap-2 hover:text-green-200 transition-all duration-300"
+          to="/contact-us"
+          className="hover:underline hover:text-green-200 transition-all duration-300"
         >
-          <FiLogIn className="text-2xl" /> {/* Login Icon */}
-          <span className="hidden sm:inline">Login</span>
+          Contact Us
         </Link>
       </div>
     </header>

@@ -1,9 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "../pages/Home.jsx";
-import { Box } from "../pages/Box.jsx";
+import { Box } from "../pages/box.jsx";
 import { ContactUs } from "../pages/ContactUs.jsx";
-import { Login } from "../pages/Login.jsx";
-import { Register } from "../pages/Register.jsx";
 import AppLayout from "../ui/AppLayout.jsx";
 import Error from "../ui/Error.jsx";
 
@@ -15,8 +13,8 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/box", element: <Box /> },
       { path: "/contact-us", element: <ContactUs /> },
-      { path: "/login", element: <Login /> },
-      { path: "/register", element: <Register /> },
+      // { path: "/login", element: <Login /> },
+      // { path: "/register", element: <Register /> },
     ],
   },
 ]);
