@@ -11,7 +11,7 @@ function AppLayout() {
   const isRootRoute = location.pathname === "/";
 
   return (
-    <div className="relative z-10 flex flex-col h-screen">
+    <div className="relative z-10 flex flex-col min-h-screen">
       {/* Header always at the top */}
       <div className="relative z-20">
         <Header />

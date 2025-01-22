@@ -1,4 +1,10 @@
 export function ContactUs() {
+  const contactDetails = {
+    poweredBy: ["Harsh", "Keval", "Utsav"],
+    phone: "+91 7016802239",
+    location: "Surat",
+  };
+
   return (
     <div
       className="relative z-10 flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat min-h-screen"
@@ -15,19 +21,23 @@ export function ContactUs() {
         </h1>
 
         {/* Contact Details */}
-        <p className="text-lg text-white mb-4 ">
+        <p className="text-lg text-white mb-4">
           <strong>Powered by :-</strong>
-          <span className="text-xl px-2">Harsh, Keval, Utsav</span>
+          {contactDetails.poweredBy.map((name, index) => (
+            <span key={index} className="text-xl px-2">
+              {name}
+            </span>
+          ))}
         </p>
 
         <p className="text-lg text-white">
           <strong>Contact No :-</strong>
-          <span className="text-xl py-5"> +91 7016802239</span>
+          <span className="text-xl py-5"> {contactDetails.phone}</span>
         </p>
 
         <p className="text-lg text-white py-4">
           <strong>Location :-</strong>
-          <span className="text-xl"> Surat</span>
+          <span className="text-xl"> {contactDetails.location}</span>
         </p>
       </div>
     </div>
