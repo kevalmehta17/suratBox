@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home } from "../pages/Home.jsx";
-import { Box } from "../pages/box.jsx";
-import { ContactUs } from "../pages/ContactUs.jsx";
-import AppLayout from "../ui/AppLayout.jsx";
-import Error from "../ui/Error.jsx";
+import { Home } from "./pages/Home.jsx";
+import { Box } from "./pages/box.jsx";
+import { ContactUs } from "./pages/ContactUs.jsx";
+import AppLayout from "./ui/AppLayout.jsx";
+import Error from "./ui/Error.jsx";
 
 const router = createBrowserRouter([
   {
