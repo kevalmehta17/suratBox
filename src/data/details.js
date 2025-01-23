@@ -16,6 +16,7 @@ export const boxCricketData = [
     ],
     timing: "6:00 AM - 11:00 PM",
     location: "123 Sports Complex, Main Road",
+    bookingLink: "https://app.acuityscheduling.com/schedule.php?owner=34595185",
   },
   // {
   //   id: 2,

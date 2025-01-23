@@ -12,6 +12,11 @@ export function Box() {
   const closeDetails = () => {
     setSelectedBox(null);
   };
+  const handleBookNow = () => {
+    if (selectedBox) {
+      window.location.href = selectedBox.bookingLink; // Use the booking link from the selected box
+    }
+  };
 
   return (
     <div className="relative z-10">
@@ -118,7 +123,10 @@ export function Box() {
                 <p className="text-xl sm:text-2xl font-bold text-blue-600">
                   ₹{selectedBox.price} per hour
                 </p>
-                <button className="mt-4 bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded hover:bg-blue-700 w-full text-sm sm:text-base">
+                <button
+                  onClick={handleBookNow}
+                  className="mt-4 bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded hover:bg-blue-700 w-full text-sm sm:text-base"
+                >
                   Book Now
                 </button>
               </div>
