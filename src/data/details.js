@@ -1,7 +1,7 @@
 export const boxCricketData = [
   {
     id: 1,
-    name: "Palm Cricket Box",
+    name: "Bro Cricket Box",
     price: 1000,
     image:
       "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=500&auto=format",
@@ -37,7 +37,7 @@ export const boxCricketData = [
   // },
   {
     id: 3,
-    name: "Bro Cricket Box",
+    name: "Palm Cricket Box",
     price: 1100,
     image:
       "https://images.unsplash.com/photo-1587385789097-0197a7fbd179?w=500&auto=format",
